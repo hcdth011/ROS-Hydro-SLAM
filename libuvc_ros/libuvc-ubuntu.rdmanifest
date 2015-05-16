@@ -1,0 +1,21 @@
+uri: 'https://github.com/ktossell/libuvc/archive/master.tar.gz'
+install-script: |
+  #!/bin/bash
+  set -o errexit
+  mkdir -p build
+  cd build
+  pwd
+  cmake ..
+  make
+  echo "About to run checkinstall make install"
+  sudo checkinstall -y --nodoc --pkgname=libuvc --pkgversion 0.0.0 make install
+check-presence-script: |
+  #!/bin/bash
+  dpkg-query -W -f='${Package} ${Status}\n' libuvc 2>&1 | awk '{\
+  if ($4 =="installed")
+    exit 0
+  else
+    print "libuvc not installed"
+  exit 1}'
+exec-path: libuvc-master
+depends: [checkinstall, libusb-1.0-dev]

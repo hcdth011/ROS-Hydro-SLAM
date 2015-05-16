@@ -1,0 +1,13 @@
+uri: 'https://raw.github.com/ktossell/libuvc_ros/master/libuvc-arch.tar.gz'
+install-script: |
+  #!/bin/bash
+  makepkg -i
+check-presence-script: |
+  #!/bin/bash
+  if pacman -Q libuvc; then
+    exit 0
+  else
+    exit 1
+  fi
+exec-path: libuvc-arch
+depends: [libusb-1.0-dev]

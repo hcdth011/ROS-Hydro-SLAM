@@ -1,0 +1,7 @@
+/usr/local/lib/libuvc.so
+/usr/local/include/libuvc/libuvc.h
+/usr/local/include/libuvc/libuvc_config.h
+/usr/local/lib/cmake/libuvc/libuvcConfig.cmake
+/usr/local/lib/cmake/libuvc/libuvcConfigVersion.cmake
+/usr/local/lib/cmake/libuvc/libuvcTargets.cmake
+/usr/local/lib/cmake/libuvc/libuvcTargets-release.cmake

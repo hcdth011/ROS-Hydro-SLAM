@@ -1,0 +1,13 @@
+<!-- example launch file for mono_odometer -->
+<launch>
+  <arg name="camera" value="usb_cam"/> <!-- camera must be set at launch -->
+  
+  <node name="rviz" pkg="rviz" type="rviz"/>
+  <node name="usb_cam" pkg="usb_cam" type="usb_cam_node"/>
+  <node name="image_proc" pkg="image_proc" type="image_proc" ns="$(arg camera)"/>
+  <node name="mono_odometer" pkg="viso2_ros" type="mono_odometer" output="screen">
+    <remap from="image" to="$(arg camera)/image_rect" />
+    <param name="camera_height" value="0.8" /> <!-- cam is 0.5m above ground -->
+    <param name="camera_pitch" value="0.0" /> <!-- cam is looking straight forward -->
+  </node>
+</launch>

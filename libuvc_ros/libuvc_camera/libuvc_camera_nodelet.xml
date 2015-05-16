@@ -1,0 +1,9 @@
+<library path="lib/liblibuvc_camera_nodelet">
+  <class name="libuvc_camera/driver"
+         type="libuvc_camera::CameraNodelet"
+         base_class_type="nodelet::Nodelet">
+    <description> 
+      UVC camera driver nodelet.
+    </description>
+  </class>
+</library>

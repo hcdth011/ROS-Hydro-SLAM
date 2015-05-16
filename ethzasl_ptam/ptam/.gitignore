@@ -1,0 +1,10 @@
+/cmake
+/lib
+*~
+build
+bin
+thirdparty/TooN/toon_built
+thirdparty/TooN/include
+src/ptam/__init__.py
+.project
+.cproject

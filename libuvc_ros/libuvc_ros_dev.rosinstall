@@ -1,0 +1,2 @@
+- git: {local-name: libuvc_ros, uri: 'git@github.com:ktossell/libuvc_ros.git', version: master }
+

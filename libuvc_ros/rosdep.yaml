@@ -1,0 +1,6 @@
+libusb-1.0:
+  ubuntu: libusb-1.0-0 libusb-1.0-0-dev
+  osxbrew:
+    homebrew:
+      packages: [ libusb ]
+
